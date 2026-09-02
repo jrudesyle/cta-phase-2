@@ -168,7 +168,6 @@ autocomplete('ccInput','ccDD','ccChips',ccList,'#e6f4ea','#166534');
 var res=[["Palmer, Robert","PMB771020-MSK"],["Palmateer, Joan","PMB640198-MSK"],["Paltrow, Gwen","PMB559871-MSK"],["Palladino, Sam","PMB330441-MSK"],["Acosta-MSK, Erin-MSK","PMB603444-MSK"]];
 var inserted={};
 var body=document.getElementById('msgBody'),mw=document.getElementById('modalWrap'),insertBtn=document.getElementById('modalInsert'),search=document.getElementById('modalSearch');
-function ensureList(){var ul=body.querySelector('ul.res-list');if(!ul){ul=document.createElement('ul');ul.className='res-list';ul.style.cssText='margin:6px 0 0 18px';body.appendChild(ul);}return ul;}
 function renderModal(){
   var q=search.value.trim().toLowerCase();
   document.getElementById('modalRows').innerHTML=res.filter(function(r){return (r[0]+' '+r[1]).toLowerCase().indexOf(q)>=0;}).map(function(r){var done=inserted[r[1]];return '<label style="display:flex;gap:8px;align-items:center;padding:6px 4px;border-bottom:1px solid #f1f5f9;'+(done?'opacity:.5':'')+'"><input type="checkbox" class="rescb" data-name="'+r[0]+'" data-mrn="'+r[1]+'" '+(done?'checked disabled':'')+'/><span><b>'+r[0]+'</b> <span style="color:#6b7280">– '+r[1]+'</span>'+(done?' <span style="color:#166534;font-size:10px">(inserted)</span>':'')+'</span></label>';}).join('');
@@ -182,7 +181,7 @@ document.getElementById('modalCancel').addEventListener('click',function(){mw.st
 search.addEventListener('input',renderModal);
 insertBtn.addEventListener('click',function(){
   var picked=document.querySelectorAll('.rescb:checked:not([disabled])');
-  if(picked.length){var ul=ensureList();Array.prototype.forEach.call(picked,function(c){var mrn=c.getAttribute('data-mrn');if(inserted[mrn])return;inserted[mrn]=true;var li=document.createElement('li');li.textContent=c.getAttribute('data-name')+' – '+mrn;ul.appendChild(li);});}
+  Array.prototype.forEach.call(picked,function(c){var mrn=c.getAttribute('data-mrn');if(inserted[mrn])return;inserted[mrn]=true;var line=document.createElement('div');line.textContent=c.getAttribute('data-name')+' – '+mrn;body.appendChild(line);});
   mw.style.display='none';
 });
 </script>
