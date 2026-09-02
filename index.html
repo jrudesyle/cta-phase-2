@@ -75,21 +75,20 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;col
         </div>
       </div>
 
-      <!-- RIGHT compose (wider, message grows) -->
       <div style="flex:0 0 480px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.10);display:flex;flex-direction:column;overflow:hidden">
         <div style="background:#1f7ae0;color:#fff;padding:10px 12px;font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center"><span>New Message</span><span style="opacity:.85">—  ✕</span></div>
         <div style="padding:10px 12px;display:flex;flex-direction:column;flex:1;min-height:0;font-size:12px">
           <div style="margin-bottom:8px;position:relative">
-            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">To (search name or facility)</div>
+            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">To (type to search — name or facility)</div>
             <div id="toChips" style="border:1px solid #d1d5db;border-radius:6px;padding:5px 6px;display:flex;gap:4px;flex-wrap:wrap;align-items:center;min-height:34px">
-              <input id="toInput" placeholder="Start typing…" style="border:none;outline:none;flex:1;min-width:80px;font-size:12px"/>
+              <input id="toInput" placeholder="Type 2+ letters to search…" style="border:none;outline:none;flex:1;min-width:120px;font-size:12px"/>
             </div>
             <div id="toDD" style="display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #cbd5e1;border-radius:0 0 8px 8px;box-shadow:0 8px 20px rgba(0,0,0,.12);z-index:6;max-height:180px;overflow:auto"></div>
           </div>
           <div style="margin-bottom:8px;position:relative">
-            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">CC — Care Coordinators (search name or facility)</div>
+            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">CC — Care Coordinators (type to search — name or facility)</div>
             <div id="ccChips" style="border:1px solid #d1d5db;border-radius:6px;padding:5px 6px;display:flex;gap:4px;flex-wrap:wrap;align-items:center;min-height:34px">
-              <input id="ccInput" placeholder="Start typing…" style="border:none;outline:none;flex:1;min-width:80px;font-size:12px"/>
+              <input id="ccInput" placeholder="Type 2+ letters to search…" style="border:none;outline:none;flex:1;min-width:120px;font-size:12px"/>
             </div>
             <div id="ccDD" style="display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #cbd5e1;border-radius:0 0 8px 8px;box-shadow:0 8px 20px rgba(0,0,0,.12);z-index:6;max-height:180px;overflow:auto"></div>
           </div>
@@ -116,7 +115,7 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;col
     <div style="background:#1f7ae0;color:#fff;padding:9px 12px;font-size:13px;font-weight:700;display:flex;justify-content:space-between"><span>Insert Resident</span><span id="modalX" style="cursor:pointer;opacity:.85">✕</span></div>
     <div style="padding:10px 12px">
       <div style="font-size:11px;color:#6b7280;margin-bottom:4px">Facility: PCC Browser · your authorized scope</div>
-      <input id="modalSearch" placeholder="Search residents…" style="width:100%;border:1px solid #d1d5db;border-radius:6px;padding:6px 8px;font-size:12px;margin-bottom:8px"/>
+      <input id="modalSearch" placeholder="Type to search residents…" style="width:100%;border:1px solid #d1d5db;border-radius:6px;padding:6px 8px;font-size:12px;margin-bottom:8px"/>
       <div id="modalRows" style="max-height:180px;overflow:auto;font-size:12px"></div>
       <div style="display:flex;gap:8px;margin-top:10px;justify-content:flex-end">
         <button id="modalCancel" style="cursor:pointer;background:#fff;color:#374151;border:1px solid #d1d5db;border-radius:5px;padding:6px 12px;font-size:12px">Cancel</button>
@@ -131,23 +130,23 @@ var navItems=[["📊 Dashboards ▾",0],["⭐ Enterprise",1],["🏢 Value-Based 
 document.getElementById('nav').innerHTML=navItems.map(function(n){var act=n[1]===1;return '<div style="padding:9px 14px 9px '+(act?'22px':'14px')+';color:'+(act?'#e0842b':'#4b5563')+';font-weight:'+(act?'700':'500')+';border-bottom:1px solid #f4f6f9">'+n[0]+'</div>';}).join('');
 var alertsData=["Resident experienced 2 or more loose/diarrhea bowel movements in the last 1 Days. Most recent documented at 4/25/2026 19:07.","Weight decreased 6.2 lb (3.3%) over the last 30 days. Most recent weight 182.4 lb on 09/01/2026.","New antibiotic order (Ciprofloxacin) started 08/30/2026 — possible infection."];
 document.getElementById('alerts').innerHTML=alertsData.map(function(a,i){return '<div style="font-size:12px;color:#7c3a09;padding:6px 0;border-bottom:'+(i<alertsData.length-1?'1px dashed #f2d38a':'none')+'"><span style="color:#c2410c;font-weight:700">• '+(i+1)+'. CM Alert:</span> '+a+'</div>';}).join('');
-
 var wd=[["09/01",182.4,"J. Nguyen, RN"],["08/25",184.0,"M. Ellis, CNA"],["08/18",185.2,"J. Nguyen, RN"],["08/11",186.0,"CNA Stn 4"],["08/04",188.6,"M. Ellis, CNA"],["07/28",189.0,"J. Nguyen, RN"],["07/21",189.4,"CNA Stn 4"],["07/14",190.1,"M. Ellis, CNA"],["07/07",191.0,"J. Nguyen, RN"],["07/04",192.3,"Admission"]];
 function dv(i){return i>=wd.length-1?null:+(wd[i][1]-wd[i+1][1]).toFixed(1);}
 function chip(d){if(d===null)return'<span style="color:#9ca3af">—</span>';var up=d>0,sig=Math.abs(d)>=3,c=up?'#b45309':'#2563eb';return '<span style="color:'+c+';font-weight:600">'+(up?'▲':'▼')+' '+Math.abs(d).toFixed(1)+'</span>'+(sig?' <span style="background:#fef3c7;color:#b45309;padding:0 5px;border-radius:4px;font-size:10px">⚠</span>':'');}
 document.getElementById('wlist').innerHTML=wd.map(function(r,i){var d=dv(i),sig=d!==null&&Math.abs(d)>=3;return '<div style="border:1px solid '+(sig?'#fde68a':'#eef2f7')+';background:'+(sig?'#fffbeb':'#fff')+';border-radius:8px;padding:7px 9px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-weight:700;font-size:13px">'+r[1].toFixed(1)+' lb</div><div style="font-size:10.5px;color:#6b7280">'+r[0]+'/2026 · '+r[2]+'</div></div><div style="font-size:11px">'+chip(d)+'</div></div>';}).join('');
 window.addEventListener('load',function(){if(window.Chart){var l=wd.map(function(r){return r[0];}).reverse(),v=wd.map(function(r){return r[1];}).reverse();new Chart(document.getElementById('wchart'),{type:'line',data:{labels:l,datasets:[{data:v,borderColor:'#2b6cb0',backgroundColor:'rgba(43,108,176,.12)',fill:true,tension:.3,pointRadius:3,pointBackgroundColor:v.map(function(x,i){return i>0&&Math.abs(x-v[i-1])>=3?'#f59e0b':'#2b6cb0';})}]},options:{plugins:{legend:{display:false}},scales:{y:{ticks:{font:{size:9}}},x:{ticks:{font:{size:8},maxRotation:0}}}}});}});
 
-/* ---- recipient autocomplete (no prefilled chips) ---- */
-var toList=[["Palmateer, Joan","RN · Memorial Hospital West"],["Alvarez, Marco","SW · Memorial Care Center"],["Boyd, Tanya","DON · Memorial Hospital West"],["Chen, Wei","NP · Riverside SNF"],["Doyle, Erin","RN · Memorial Care Center"]];
-var ccList=[["Adams, Priya","CTA/Care Coordinator · Region 2"],["Alcott, Dana","CTA/Care Coordinator · Region 5"],["Ayers, Kim","CTA/Care Coordinator · Region 2"],["Bell, Marcus","CTA/Care Coordinator · Region 3"]];
+/* recipient autocomplete — NO pre-populated list, only after 2+ chars */
+var toList=[["Palmateer, Joan","RN · Memorial Hospital West"],["Alvarez, Marco","SW · Memorial Care Center"],["Boyd, Tanya","DON · Memorial Hospital West"],["Chen, Wei","NP · Riverside SNF"],["Doyle, Erin","RN · Memorial Care Center"],["Nguyen, Jamie","RN · PCC Browser"]];
+var ccList=[["Adams, Priya","CTA/Care Coordinator · Region 2"],["Alcott, Dana","CTA/Care Coordinator · Region 5"],["Ayers, Kim","CTA/Care Coordinator · Region 2"],["Bell, Marcus","CTA/Care Coordinator · Region 3"],["Nguyen, Jae","CTA/Care Coordinator · Region 2"]];
 function autocomplete(inputId,ddId,contId,data,bg,fg){
   var input=document.getElementById(inputId),dd=document.getElementById(ddId),cont=document.getElementById(contId),chosen=[];
   function render(){
     var q=input.value.trim().toLowerCase();
+    if(q.length<2){dd.style.display='none';return;}
     var m=data.filter(function(r){return (r[0]+' '+r[1]).toLowerCase().indexOf(q)>=0 && chosen.indexOf(r[0])<0;});
-    if(!m.length){dd.style.display='none';return;}
-    dd.innerHTML=m.map(function(r,i){return '<div data-i="'+data.indexOf(r)+'" style="padding:7px 10px;border-bottom:1px solid #f1f5f9;cursor:pointer;font-size:12px"><b>'+r[0]+'</b><div style="color:#6b7280;font-size:11px">'+r[1]+'</div></div>';}).join('');
+    if(!m.length){dd.innerHTML='<div style="padding:8px 10px;color:#9ca3af;font-size:11px">No matches</div>';dd.style.display='block';return;}
+    dd.innerHTML=m.map(function(r){return '<div data-i="'+data.indexOf(r)+'" style="padding:7px 10px;border-bottom:1px solid #f1f5f9;cursor:pointer;font-size:12px"><b>'+r[0]+'</b><div style="color:#6b7280;font-size:11px">'+r[1]+'</div></div>';}).join('');
     Array.prototype.forEach.call(dd.children,function(el){el.addEventListener('mousedown',function(e){e.preventDefault();add(data[+el.getAttribute('data-i')][0]);});});
     dd.style.display='block';
   }
@@ -159,14 +158,13 @@ function autocomplete(inputId,ddId,contId,data,bg,fg){
     c.querySelector('span').addEventListener('click',function(){cont.removeChild(c);var k=chosen.indexOf(label);if(k>=0)chosen.splice(k,1);});
     cont.insertBefore(c,input);input.value='';dd.style.display='none';input.focus();
   }
-  input.addEventListener('focus',render);
   input.addEventListener('input',render);
   input.addEventListener('blur',function(){setTimeout(function(){dd.style.display='none';},150);});
 }
 autocomplete('toInput','toDD','toChips',toList,'#e0ecfa','#1e40af');
 autocomplete('ccInput','ccDD','ccChips',ccList,'#e6f4ea','#166534');
 
-/* ---- Insert Resident (working) ---- */
+/* Insert Resident (working) */
 var res=[["Palmer, Robert","PMB771020-MSK"],["Palmateer, Joan","PMB640198-MSK"],["Paltrow, Gwen","PMB559871-MSK"],["Palladino, Sam","PMB330441-MSK"],["Acosta-MSK, Erin-MSK","PMB603444-MSK"]];
 var inserted={};
 var body=document.getElementById('msgBody'),mw=document.getElementById('modalWrap'),insertBtn=document.getElementById('modalInsert'),search=document.getElementById('modalSearch');
