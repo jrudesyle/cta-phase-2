@@ -5,37 +5,35 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>CTA Phase 2 — Care Coordination Mockup (RP-16512)</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style>body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;background:#eef1f5}*{box-sizing:border-box}</style>
+<style>
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1f2937;background:#eef1f5}*{box-sizing:border-box}
+#msgBody:empty:before{content:attr(data-ph);color:#9ca3af}
+</style>
 </head>
 <body>
 <div style="display:flex;min-height:100vh">
-  <!-- SIDEBAR -->
   <aside style="width:214px;flex:none;background:#fff;border-right:1px solid #e8ebf0;display:flex;flex-direction:column">
     <div style="padding:12px 14px;border-bottom:1px solid #eef1f5"><span style="color:#2b6cb0;font-weight:800;font-size:15px">✚ Real Time</span><div style="font-size:8px;letter-spacing:1.5px;color:#e0842b;margin-top:1px">MEDICAL SYSTEMS</div></div>
     <div style="padding:8px 14px;border-bottom:1px solid #eef1f5;font-size:11px"><div style="font-weight:600;color:#374151">Jeffrey Rudesyle</div><div style="color:#9ca3af;margin-top:3px;letter-spacing:3px">⚙ ✉ ⛨ ⎋</div></div>
     <div style="background:#1f7ae0;color:#fff;font-size:11px;font-weight:700;padding:11px 14px;display:flex;justify-content:space-between">🤝 CARE COORDINATION <span>‹</span></div>
-    <nav id="nav" style="font-size:11px;color:#4b5563;padding:2px 0"></nav>
-    <div style="margin-top:auto;padding:12px 14px;font-size:9px;color:#9ca3af;border-top:1px solid #eef1f5">Version 32.0<br><span style="color:#2b6cb0">help@realtimemed.com</span><br>888.546.9786</div>
+    <nav id="nav" style="font-size:11px;color:#4b5563"></nav>
+    <div style="margin-top:auto;padding:12px 14px;font-size:9px;color:#9ca3af;border-top:1px solid #eef1f5">Version 32.0<br><span style="color:#2b6cb0">help@realtimemed.com</span></div>
   </aside>
 
-  <!-- MAIN -->
   <div style="flex:1;min-width:0;display:flex;flex-direction:column">
     <div style="background:#1f7ae0;color:#fff;padding:11px 16px;font-size:11px;font-weight:700;display:flex;justify-content:flex-end;align-items:center;gap:12px"><span>👤 JEFFREY RUDESYLE - REAL TIME MEDICAL SYSTEMS</span><span style="opacity:.85">⑦</span></div>
-
     <div style="padding:10px 14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#fff;border-bottom:1px solid #e8ebf0">
       <span style="color:#2b6cb0;font-size:16px">🖐</span>
       <span style="background:#fff;border:1px solid #d1d5db;border-radius:5px;padding:6px 9px;font-size:11px">PCC Browser ▾</span>
       <span style="background:#fff;border:1px solid #d1d5db;border-radius:5px;padding:6px 9px;font-size:11px">📅 09/02/2026</span>
       <span style="background:#fff;border:1px solid #d1d5db;border-radius:5px;padding:6px 9px;font-size:11px;flex:1;min-width:150px">Acosta-MSK, Erin-MSK (PMB603444-MSK) ▾</span>
       <span style="background:#fff;border:1px solid #d1d5db;border-radius:5px;padding:6px 9px;font-size:11px">‹ 1/41 ›</span>
-      <button id="composeBtn" style="cursor:pointer;background:#2f9e44;color:#fff;border:none;border-radius:5px;padding:8px 14px;font-size:12px;font-weight:700">✎ COMPOSE</button>
     </div>
 
     <div style="flex:1;display:flex;gap:12px;padding:12px;background:#eef1f5">
-      <!-- LEFT dashboard -->
       <div style="flex:1;min-width:0">
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:stretch">
-          <div style="flex:1;min-width:300px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px">
+          <div style="flex:1;min-width:280px;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:14px">
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;font-size:12px">
               <div><span style="color:#2b6cb0">👤 Resident:</span><br><b>🟡 Acosta-MSK, Erin-MSK (PMB603444-MSK)</b></div>
               <div><span style="color:#2b6cb0">🛏 Room/Bed:</span><br><b>Room-MSK 435</b></div>
@@ -46,7 +44,7 @@
               <div><span style="color:#2b6cb0">📄 Payer:</span> <b>Medicare A</b></div>
             </div>
           </div>
-          <div style="flex:1;min-width:300px;background:#fffdf5;border:2px solid #f2a93b;border-radius:8px;padding:12px 14px;display:flex;flex-direction:column">
+          <div style="flex:1;min-width:280px;background:#fffdf5;border:2px solid #f2a93b;border-radius:8px;padding:12px 14px;display:flex;flex-direction:column">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
               <span style="color:#d97706;font-weight:800;font-size:13px">⚠ CM ALERTS</span>
               <span style="color:#d97706;font-size:11px;border:1px solid #f2a93b;border-radius:4px;padding:2px 7px">📅 09/02/2026</span>
@@ -67,47 +65,45 @@
             <span style="padding:11px 10px;color:#dc2626;font-weight:700;border-bottom:3px solid #dc2626">⚖️ Weight (10)</span>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;padding:12px">
-            <div style="flex:1;min-width:250px;border:1px solid #eef2f7;border-radius:8px;padding:10px">
+            <div style="flex:1;min-width:230px;border:1px solid #eef2f7;border-radius:8px;padding:10px">
               <div style="font-size:12px;font-weight:700;color:#2b6cb0;margin-bottom:6px">Weight trend (lb)</div>
-              <div style="height:160px"><canvas id="wchart"></canvas></div>
+              <div style="height:150px"><canvas id="wchart"></canvas></div>
               <div style="margin-top:6px;font-size:11px;color:#6b7280">30-day: <span style="color:#b45309;font-weight:700">−6.2 lb (−3.3%)</span> <span style="background:#fef3c7;color:#b45309;padding:1px 6px;border-radius:4px;font-weight:600">⚠</span></div>
             </div>
-            <div style="flex:1;min-width:250px;max-height:230px;overflow:auto" id="wlist"></div>
+            <div style="flex:1;min-width:230px;max-height:210px;overflow:auto" id="wlist"></div>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT compose (split) -->
-      <div style="flex:0 0 380px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.10);display:flex;flex-direction:column;overflow:hidden">
+      <!-- RIGHT compose (wider, message grows) -->
+      <div style="flex:0 0 480px;background:#fff;border:1px solid #cbd5e1;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.10);display:flex;flex-direction:column;overflow:hidden">
         <div style="background:#1f7ae0;color:#fff;padding:10px 12px;font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center"><span>New Message</span><span style="opacity:.85">—  ✕</span></div>
-        <div style="padding:10px 12px;overflow:auto;font-size:12px">
+        <div style="padding:10px 12px;display:flex;flex-direction:column;flex:1;min-height:0;font-size:12px">
           <div style="margin-bottom:8px;position:relative">
-            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">To (name or facility)</div>
-            <div style="border:1px solid #d1d5db;border-radius:6px;padding:5px 6px;display:flex;gap:4px;flex-wrap:wrap;align-items:center">
-              <span style="background:#e0ecfa;color:#1e40af;border-radius:10px;padding:2px 8px">Palmer, R. ✕</span>
-              <input id="toInput" placeholder="Search…" style="border:none;outline:none;flex:1;min-width:60px;font-size:12px"/>
+            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">To (search name or facility)</div>
+            <div id="toChips" style="border:1px solid #d1d5db;border-radius:6px;padding:5px 6px;display:flex;gap:4px;flex-wrap:wrap;align-items:center;min-height:34px">
+              <input id="toInput" placeholder="Start typing…" style="border:none;outline:none;flex:1;min-width:80px;font-size:12px"/>
             </div>
-            <div id="toDD" style="display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #cbd5e1;border-radius:0 0 8px 8px;box-shadow:0 8px 20px rgba(0,0,0,.12);z-index:6"></div>
+            <div id="toDD" style="display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #cbd5e1;border-radius:0 0 8px 8px;box-shadow:0 8px 20px rgba(0,0,0,.12);z-index:6;max-height:180px;overflow:auto"></div>
           </div>
           <div style="margin-bottom:8px;position:relative">
-            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">CC — Care Coordinators</div>
-            <div style="border:1px solid #d1d5db;border-radius:6px;padding:5px 6px;display:flex;gap:4px;flex-wrap:wrap;align-items:center">
-              <span style="background:#e6f4ea;color:#166534;border-radius:10px;padding:2px 8px">Nguyen, J. (CTA) ✕</span>
-              <input id="ccInput" placeholder="Add coordinator…" style="border:none;outline:none;flex:1;min-width:60px;font-size:12px"/>
+            <div style="color:#6b7280;font-size:11px;margin-bottom:3px">CC — Care Coordinators (search name or facility)</div>
+            <div id="ccChips" style="border:1px solid #d1d5db;border-radius:6px;padding:5px 6px;display:flex;gap:4px;flex-wrap:wrap;align-items:center;min-height:34px">
+              <input id="ccInput" placeholder="Start typing…" style="border:none;outline:none;flex:1;min-width:80px;font-size:12px"/>
             </div>
-            <div id="ccDD" style="display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #cbd5e1;border-radius:0 0 8px 8px;box-shadow:0 8px 20px rgba(0,0,0,.12);z-index:6"></div>
+            <div id="ccDD" style="display:none;position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #cbd5e1;border-radius:0 0 8px 8px;box-shadow:0 8px 20px rgba(0,0,0,.12);z-index:6;max-height:180px;overflow:auto"></div>
           </div>
-          <div style="border:1px solid #d1d5db;border-radius:6px;overflow:hidden">
-            <div style="display:flex;gap:2px;background:#f3f4f6;border-bottom:1px solid #e5e7eb;padding:4px 6px;font-size:13px;color:#374151;align-items:center">
+          <div style="border:1px solid #d1d5db;border-radius:6px;overflow:hidden;display:flex;flex-direction:column;flex:1;min-height:0">
+            <div style="display:flex;gap:2px;background:#f3f4f6;border-bottom:1px solid #e5e7eb;padding:5px 6px;font-size:13px;color:#374151;align-items:center">
               <b style="padding:2px 6px;cursor:pointer">B</b><i style="padding:2px 6px;cursor:pointer">I</i><span style="padding:2px 6px;cursor:pointer">•</span><span style="padding:2px 6px;cursor:pointer">1.</span>
               <span style="flex:1"></span>
-              <button id="insBtn" style="cursor:pointer;font-size:11px;background:#eef2ff;color:#3730a3;border:1px solid #c7d2fe;border-radius:4px;padding:2px 8px">+ Insert Resident</button>
+              <button id="insBtn" style="cursor:pointer;font-size:11px;background:#eef2ff;color:#3730a3;border:1px solid #c7d2fe;border-radius:4px;padding:3px 9px">+ Insert Resident</button>
             </div>
-            <div contenteditable="true" style="min-height:120px;padding:8px;font-size:12px;color:#111;outline:none">Please review the following residents:<ul style="margin:6px 0 0 18px"><li>Acosta-MSK, Erin-MSK – PMB603444-MSK</li><li>Palmer, Robert – PMB771020-MSK</li></ul></div>
+            <div id="msgBody" contenteditable="true" data-ph="Type your message…" style="flex:1;min-height:220px;padding:10px;font-size:12px;color:#111;outline:none;overflow:auto"></div>
           </div>
           <div style="display:flex;gap:8px;margin-top:10px">
-            <button style="cursor:pointer;background:#2f9e44;color:#fff;border:none;border-radius:5px;padding:7px 16px;font-size:12px;font-weight:700">Send</button>
-            <button style="cursor:pointer;background:#fff;color:#374151;border:1px solid #d1d5db;border-radius:5px;padding:7px 14px;font-size:12px">Cancel</button>
+            <button style="cursor:pointer;background:#2f9e44;color:#fff;border:none;border-radius:5px;padding:8px 18px;font-size:12px;font-weight:700">Send</button>
+            <button style="cursor:pointer;background:#fff;color:#374151;border:1px solid #d1d5db;border-radius:5px;padding:8px 14px;font-size:12px">Cancel</button>
           </div>
         </div>
       </div>
@@ -120,11 +116,11 @@
     <div style="background:#1f7ae0;color:#fff;padding:9px 12px;font-size:13px;font-weight:700;display:flex;justify-content:space-between"><span>Insert Resident</span><span id="modalX" style="cursor:pointer;opacity:.85">✕</span></div>
     <div style="padding:10px 12px">
       <div style="font-size:11px;color:#6b7280;margin-bottom:4px">Facility: PCC Browser · your authorized scope</div>
-      <input value="pal" style="width:100%;border:1px solid #d1d5db;border-radius:6px;padding:6px 8px;font-size:12px;margin-bottom:8px"/>
+      <input id="modalSearch" placeholder="Search residents…" style="width:100%;border:1px solid #d1d5db;border-radius:6px;padding:6px 8px;font-size:12px;margin-bottom:8px"/>
       <div id="modalRows" style="max-height:180px;overflow:auto;font-size:12px"></div>
       <div style="display:flex;gap:8px;margin-top:10px;justify-content:flex-end">
         <button id="modalCancel" style="cursor:pointer;background:#fff;color:#374151;border:1px solid #d1d5db;border-radius:5px;padding:6px 12px;font-size:12px">Cancel</button>
-        <button id="modalInsert" style="cursor:pointer;background:#2f9e44;color:#fff;border:none;border-radius:5px;padding:6px 14px;font-size:12px;font-weight:700">Insert (2)</button>
+        <button id="modalInsert" style="cursor:pointer;background:#2f9e44;color:#fff;border:none;border-radius:5px;padding:6px 14px;font-size:12px;font-weight:700">Insert (0)</button>
       </div>
     </div>
   </div>
@@ -133,12 +129,7 @@
 <script>
 var navItems=[["📊 Dashboards ▾",0],["⭐ Enterprise",1],["🏢 Value-Based Care",0],["🛏 PDPM",0],["👤 Resident",0],["💲 Financial",0],["🩺 Clinical",0],["📈 PROACT",0],["🏥 PROACT HS",0],["🛡 Infection Control",0],["📋 Admin Reports ‹",0],["📄 Reports",0],["✉ Inbox",0],["📁 Documentation",0]];
 document.getElementById('nav').innerHTML=navItems.map(function(n){var act=n[1]===1;return '<div style="padding:9px 14px 9px '+(act?'22px':'14px')+';color:'+(act?'#e0842b':'#4b5563')+';font-weight:'+(act?'700':'500')+';border-bottom:1px solid #f4f6f9">'+n[0]+'</div>';}).join('');
-
-var alertsData=[
- "Resident experienced 2 or more loose/diarrhea bowel movements in the last 1 Days. Most recent documented at 4/25/2026 19:07.",
- "Weight decreased 6.2 lb (3.3%) over the last 30 days. Most recent weight 182.4 lb on 09/01/2026.",
- "New antibiotic order (Ciprofloxacin) started 08/30/2026 — possible infection."
-];
+var alertsData=["Resident experienced 2 or more loose/diarrhea bowel movements in the last 1 Days. Most recent documented at 4/25/2026 19:07.","Weight decreased 6.2 lb (3.3%) over the last 30 days. Most recent weight 182.4 lb on 09/01/2026.","New antibiotic order (Ciprofloxacin) started 08/30/2026 — possible infection."];
 document.getElementById('alerts').innerHTML=alertsData.map(function(a,i){return '<div style="font-size:12px;color:#7c3a09;padding:6px 0;border-bottom:'+(i<alertsData.length-1?'1px dashed #f2d38a':'none')+'"><span style="color:#c2410c;font-weight:700">• '+(i+1)+'. CM Alert:</span> '+a+'</div>';}).join('');
 
 var wd=[["09/01",182.4,"J. Nguyen, RN"],["08/25",184.0,"M. Ellis, CNA"],["08/18",185.2,"J. Nguyen, RN"],["08/11",186.0,"CNA Stn 4"],["08/04",188.6,"M. Ellis, CNA"],["07/28",189.0,"J. Nguyen, RN"],["07/21",189.4,"CNA Stn 4"],["07/14",190.1,"M. Ellis, CNA"],["07/07",191.0,"J. Nguyen, RN"],["07/04",192.3,"Admission"]];
@@ -147,24 +138,55 @@ function chip(d){if(d===null)return'<span style="color:#9ca3af">—</span>';var 
 document.getElementById('wlist').innerHTML=wd.map(function(r,i){var d=dv(i),sig=d!==null&&Math.abs(d)>=3;return '<div style="border:1px solid '+(sig?'#fde68a':'#eef2f7')+';background:'+(sig?'#fffbeb':'#fff')+';border-radius:8px;padding:7px 9px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-weight:700;font-size:13px">'+r[1].toFixed(1)+' lb</div><div style="font-size:10.5px;color:#6b7280">'+r[0]+'/2026 · '+r[2]+'</div></div><div style="font-size:11px">'+chip(d)+'</div></div>';}).join('');
 window.addEventListener('load',function(){if(window.Chart){var l=wd.map(function(r){return r[0];}).reverse(),v=wd.map(function(r){return r[1];}).reverse();new Chart(document.getElementById('wchart'),{type:'line',data:{labels:l,datasets:[{data:v,borderColor:'#2b6cb0',backgroundColor:'rgba(43,108,176,.12)',fill:true,tension:.3,pointRadius:3,pointBackgroundColor:v.map(function(x,i){return i>0&&Math.abs(x-v[i-1])>=3?'#f59e0b':'#2b6cb0';})}]},options:{plugins:{legend:{display:false}},scales:{y:{ticks:{font:{size:9}}},x:{ticks:{font:{size:8},maxRotation:0}}}}});}});
 
-var toList=[["Palmateer, Joan","RN · Memorial Hospital West"],["Alvarez, Marco","SW · Memorial Care Center"],["Boyd, Tanya","DON · Memorial Hospital West"]];
-var ccList=[["Adams, Priya","CTA/Care Coordinator · Region 2"],["Alcott, Dana","CTA/Care Coordinator · Region 5"],["Ayers, Kim","CTA/Care Coordinator · Region 2"]];
-function rowsHTML(list){return list.map(function(r){return '<div style="padding:7px 10px;border-bottom:1px solid #f1f5f9;cursor:pointer;font-size:12px"><b>'+r[0]+'</b><div style="color:#6b7280;font-size:11px">'+r[1]+'</div></div>';}).join('');}
-var toDD=document.getElementById('toDD'),ccDD=document.getElementById('ccDD');
-toDD.innerHTML=rowsHTML(toList);ccDD.innerHTML=rowsHTML(ccList);
-var toI=document.getElementById('toInput'),ccI=document.getElementById('ccInput');
-toI.addEventListener('focus',function(){toDD.style.display='block';});
-toI.addEventListener('blur',function(){setTimeout(function(){toDD.style.display='none';},150);});
-ccI.addEventListener('focus',function(){ccDD.style.display='block';});
-ccI.addEventListener('blur',function(){setTimeout(function(){ccDD.style.display='none';},150);});
-var res=[["Palmer, Robert","PMB771020-MSK"],["Palmateer, Joan","PMB640198-MSK"],["Paltrow, Gwen","PMB559871-MSK"],["Palladino, Sam","PMB330441-MSK"]];
-document.getElementById('modalRows').innerHTML=res.map(function(r,i){return '<label style="display:flex;gap:8px;align-items:center;padding:6px 4px;border-bottom:1px solid #f1f5f9"><input type="checkbox" '+(i<2?'checked':'')+'/><span><b>'+r[0]+'</b> <span style="color:#6b7280">– '+r[1]+'</span></span></label>';}).join('');
-var mw=document.getElementById('modalWrap');
-document.getElementById('insBtn').addEventListener('click',function(){mw.style.display='flex';});
+/* ---- recipient autocomplete (no prefilled chips) ---- */
+var toList=[["Palmateer, Joan","RN · Memorial Hospital West"],["Alvarez, Marco","SW · Memorial Care Center"],["Boyd, Tanya","DON · Memorial Hospital West"],["Chen, Wei","NP · Riverside SNF"],["Doyle, Erin","RN · Memorial Care Center"]];
+var ccList=[["Adams, Priya","CTA/Care Coordinator · Region 2"],["Alcott, Dana","CTA/Care Coordinator · Region 5"],["Ayers, Kim","CTA/Care Coordinator · Region 2"],["Bell, Marcus","CTA/Care Coordinator · Region 3"]];
+function autocomplete(inputId,ddId,contId,data,bg,fg){
+  var input=document.getElementById(inputId),dd=document.getElementById(ddId),cont=document.getElementById(contId),chosen=[];
+  function render(){
+    var q=input.value.trim().toLowerCase();
+    var m=data.filter(function(r){return (r[0]+' '+r[1]).toLowerCase().indexOf(q)>=0 && chosen.indexOf(r[0])<0;});
+    if(!m.length){dd.style.display='none';return;}
+    dd.innerHTML=m.map(function(r,i){return '<div data-i="'+data.indexOf(r)+'" style="padding:7px 10px;border-bottom:1px solid #f1f5f9;cursor:pointer;font-size:12px"><b>'+r[0]+'</b><div style="color:#6b7280;font-size:11px">'+r[1]+'</div></div>';}).join('');
+    Array.prototype.forEach.call(dd.children,function(el){el.addEventListener('mousedown',function(e){e.preventDefault();add(data[+el.getAttribute('data-i')][0]);});});
+    dd.style.display='block';
+  }
+  function add(label){
+    if(chosen.indexOf(label)>=0)return;chosen.push(label);
+    var c=document.createElement('span');
+    c.style.cssText='background:'+bg+';color:'+fg+';border-radius:10px;padding:2px 8px;display:inline-flex;align-items:center;gap:5px;font-size:12px';
+    c.innerHTML=label+' <span style="cursor:pointer;font-weight:700">✕</span>';
+    c.querySelector('span').addEventListener('click',function(){cont.removeChild(c);var k=chosen.indexOf(label);if(k>=0)chosen.splice(k,1);});
+    cont.insertBefore(c,input);input.value='';dd.style.display='none';input.focus();
+  }
+  input.addEventListener('focus',render);
+  input.addEventListener('input',render);
+  input.addEventListener('blur',function(){setTimeout(function(){dd.style.display='none';},150);});
+}
+autocomplete('toInput','toDD','toChips',toList,'#e0ecfa','#1e40af');
+autocomplete('ccInput','ccDD','ccChips',ccList,'#e6f4ea','#166534');
+
+/* ---- Insert Resident (working) ---- */
+var res=[["Palmer, Robert","PMB771020-MSK"],["Palmateer, Joan","PMB640198-MSK"],["Paltrow, Gwen","PMB559871-MSK"],["Palladino, Sam","PMB330441-MSK"],["Acosta-MSK, Erin-MSK","PMB603444-MSK"]];
+var inserted={};
+var body=document.getElementById('msgBody'),mw=document.getElementById('modalWrap'),insertBtn=document.getElementById('modalInsert'),search=document.getElementById('modalSearch');
+function ensureList(){var ul=body.querySelector('ul.res-list');if(!ul){ul=document.createElement('ul');ul.className='res-list';ul.style.cssText='margin:6px 0 0 18px';body.appendChild(ul);}return ul;}
+function renderModal(){
+  var q=search.value.trim().toLowerCase();
+  document.getElementById('modalRows').innerHTML=res.filter(function(r){return (r[0]+' '+r[1]).toLowerCase().indexOf(q)>=0;}).map(function(r){var done=inserted[r[1]];return '<label style="display:flex;gap:8px;align-items:center;padding:6px 4px;border-bottom:1px solid #f1f5f9;'+(done?'opacity:.5':'')+'"><input type="checkbox" class="rescb" data-name="'+r[0]+'" data-mrn="'+r[1]+'" '+(done?'checked disabled':'')+'/><span><b>'+r[0]+'</b> <span style="color:#6b7280">– '+r[1]+'</span>'+(done?' <span style="color:#166534;font-size:10px">(inserted)</span>':'')+'</span></label>';}).join('');
+  Array.prototype.forEach.call(document.querySelectorAll('.rescb'),function(c){c.addEventListener('change',updCount);});
+  updCount();
+}
+function updCount(){var n=document.querySelectorAll('.rescb:checked:not([disabled])').length;insertBtn.textContent='Insert ('+n+')';}
+document.getElementById('insBtn').addEventListener('click',function(){search.value='';renderModal();mw.style.display='flex';});
 document.getElementById('modalX').addEventListener('click',function(){mw.style.display='none';});
 document.getElementById('modalCancel').addEventListener('click',function(){mw.style.display='none';});
-document.getElementById('modalInsert').addEventListener('click',function(){mw.style.display='none';});
-document.getElementById('composeBtn').addEventListener('click',function(){toI.focus();});
+search.addEventListener('input',renderModal);
+insertBtn.addEventListener('click',function(){
+  var picked=document.querySelectorAll('.rescb:checked:not([disabled])');
+  if(picked.length){var ul=ensureList();Array.prototype.forEach.call(picked,function(c){var mrn=c.getAttribute('data-mrn');if(inserted[mrn])return;inserted[mrn]=true;var li=document.createElement('li');li.textContent=c.getAttribute('data-name')+' – '+mrn;ul.appendChild(li);});}
+  mw.style.display='none';
+});
 </script>
 </body>
 </html>
